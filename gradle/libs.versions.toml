@@ -1,0 +1,48 @@
+[versions]
+agp = "8.11.0"
+kotlin = "2.2.0"
+coreKtx = "1.16.0"
+appcompat = "1.7.1"
+composeBom = "2024.09.00"
+tvFoundation = "1.0.0-alpha07"
+tvMaterial = "1.0.0"
+lifecycleRuntimeKtx = "2.9.1"
+activityCompose = "1.10.1"
+hilt-compose = "1.2.0"
+room = "2.7.2"
+ksoap2 = "3.6.4"
+androidxMedia3 = "1.7.1"
+
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-tv-foundation = { group = "androidx.tv", name = "tv-foundation", version.ref = "tvFoundation" }
+androidx-tv-material = { group = "androidx.tv", name = "tv-material", version.ref = "tvMaterial" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+
+hilt-android = { module = "com.google.dagger:hilt-android", version = "2.56.2" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version = "2.56.2" }
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hilt-compose" }
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+room-ksp = { module = "androidx.room:room-compiler", version.ref = "room" }
+ksoap2 = { module = "com.google.code.ksoap2-android:ksoap2-android", version.ref = "ksoap2" }
+androidx-media3-exoplayer = { group = "androidx.media3", name = "media3-exoplayer", version.ref = "androidxMedia3" }
+androidx-media3-ui = { group = "androidx.media3", name = "media3-ui", version.ref = "androidxMedia3" }
+androidx-media3-exoplayer-rtsp = { group = "androidx.media3", name = "media3-exoplayer-rtsp", version.ref = "androidxMedia3" } # Si necesitas RTSP
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
