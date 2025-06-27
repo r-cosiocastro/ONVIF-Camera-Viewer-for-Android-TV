@@ -38,8 +38,8 @@ fun CameraListScreen(viewModel: CamerasViewModel = hiltViewModel()) {
 
     Column {
         Button(onClick = {
-            //viewModel.scanCameras()
-            showStreamUrl = fullRtspUrl
+            viewModel.scanCameras()
+            //showStreamUrl = fullRtspUrl
         }) {
             Text("Escanear Cámaras")
         }

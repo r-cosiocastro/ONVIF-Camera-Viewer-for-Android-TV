@@ -47,7 +47,6 @@ fun CameraStreamView(
                 .setLoadControl(loadControl)
                 .build().apply {
                 setMediaItem(MediaItem.fromUri(streamUrl))
-                playWhenReady = true
                     addListener(object : Player.Listener {
                         override fun onPlayerError(error: PlaybackException) {
                             Log.e("MyExoPlayer", "Player Error: ${error.message}", error)
@@ -65,6 +64,7 @@ fun CameraStreamView(
                             Log.d("MyExoPlayer", "Playback State: $playbackState")
                         }
                     })
+                    playWhenReady = true
                 prepare()
             }
         }
