@@ -3,16 +3,18 @@ agp = "8.11.0"
 kotlin = "2.2.0"
 coreKtx = "1.16.0"
 appcompat = "1.7.1"
-composeBom = "2024.09.00"
-tvFoundation = "1.0.0-alpha07"
-tvMaterial = "1.0.0"
+composeBom = "2025.06.01"
+tvFoundation = "1.0.0-alpha10"
+tvMaterial = "1.0.0-alpha10"
 lifecycleRuntimeKtx = "2.9.1"
 activityCompose = "1.10.1"
 hilt-compose = "1.2.0"
 room = "2.7.2"
 ksoap2 = "3.6.4"
 androidxMedia3 = "1.7.1"
-
+navigationCompose = "2.9.1"
+materialIconsExtended = "1.7.8"
+material3Android = "1.3.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -26,8 +28,11 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-tv-foundation = { group = "androidx.tv", name = "tv-foundation", version.ref = "tvFoundation" }
 androidx-tv-material = { group = "androidx.tv", name = "tv-material", version.ref = "tvMaterial" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-material-icons-core = { module = "androidx.compose.material:material-icons-core", version.ref = "materialIconsExtended" }
+androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
 
 hilt-android = { module = "com.google.dagger:hilt-android", version = "2.56.2" }
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version = "2.56.2" }
@@ -38,7 +43,8 @@ room-ksp = { module = "androidx.room:room-compiler", version.ref = "room" }
 ksoap2 = { module = "com.google.code.ksoap2-android:ksoap2-android", version.ref = "ksoap2" }
 androidx-media3-exoplayer = { group = "androidx.media3", name = "media3-exoplayer", version.ref = "androidxMedia3" }
 androidx-media3-ui = { group = "androidx.media3", name = "media3-ui", version.ref = "androidxMedia3" }
-androidx-media3-exoplayer-rtsp = { group = "androidx.media3", name = "media3-exoplayer-rtsp", version.ref = "androidxMedia3" } # Si necesitas RTSP
+androidx-media3-exoplayer-rtsp = { group = "androidx.media3", name = "media3-exoplayer-rtsp", version.ref = "androidxMedia3" }
+androidx-material3-android = { group = "androidx.compose.material3", name = "material3-android", version.ref = "material3Android" } # Si necesitas RTSP
 
 
 [plugins]

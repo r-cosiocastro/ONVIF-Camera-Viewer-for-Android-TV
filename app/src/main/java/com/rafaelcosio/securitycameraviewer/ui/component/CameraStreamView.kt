@@ -2,6 +2,7 @@ package com.rafaelcosio.securitycameraviewer.ui.component
 
 import android.util.Log
 import android.view.LayoutInflater
+import android.widget.Toast
 import androidx.annotation.OptIn
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
@@ -92,6 +93,11 @@ fun CameraStreamView(
             }
 
             override fun onPlayerError(error: PlaybackException) {
+                Toast.makeText(
+                    context,
+                    "Error al reproducir el stream: ${error.message}",
+                    Toast.LENGTH_LONG
+                ).show()
                 Log.e("PlayerEvent", "URL: $streamUrl, Error Player: ${error.message}", error)
             }
 

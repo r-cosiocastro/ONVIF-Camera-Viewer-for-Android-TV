@@ -1,22 +1,16 @@
 package com.rafaelcosio.securitycameraviewer.ui.component
 
 import androidx.annotation.OptIn
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.tv.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.tv.material3.Button
-import com.rafaelcosio.securitycameraviewer.ui.viewmodel.CamerasViewModel
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.media3.common.util.Log
 import androidx.media3.common.util.UnstableApi
-import androidx.media3.common.util.Util
+import com.rafaelcosio.securitycameraviewer.ui.viewmodel.CamerasViewModel
 
 @OptIn(UnstableApi::class)
 @Composable
@@ -27,7 +21,7 @@ fun CameraListScreen(viewModel: CamerasViewModel = hiltViewModel()) {
     // Test RTSP URL
     val username = "admin"
     val password = "IB7Eulpt"
-    val cameraIp = "192.168.1.12"
+    val cameraIp = "192.168.1.122"
     val cameraPort = "554"
     val channel = "0"
     val streamQuality = "0" // 0 = Main Stream, 1 = Sub Stream
@@ -36,10 +30,11 @@ fun CameraListScreen(viewModel: CamerasViewModel = hiltViewModel()) {
 
     Log.d("CameraApp", "Intentando RTSP URL: $fullRtspUrl")
 
+    /*
     Column {
         Button(onClick = {
-            viewModel.scanCameras()
-            //showStreamUrl = fullRtspUrl
+            //viewModel.scanCameras()
+            showStreamUrl = fullRtspUrl
         }) {
             Text("Escanear Cámaras")
         }
@@ -55,4 +50,6 @@ fun CameraListScreen(viewModel: CamerasViewModel = hiltViewModel()) {
             }
         }
     }
+
+     */
 }
